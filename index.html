@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MT Fitness Coaching</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <svg class="logo-svg" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="10,55 45,15 65,35 85,10 115,55" fill="none" stroke="#b8d400" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <text x="8" y="30" fill="none" stroke="#b8d400" stroke-width="1.5" font-family="Inter,sans-serif" font-weight="700" font-size="20" letter-spacing="1">mt</text>
+      </svg>
+    </a>
+    <a href="contact.html" class="nav-cta">Work With Us</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Online Fitness Coaching</p>
+      <h1 class="hero-headline reveal">
+        A workout is more than<br/>
+        <span class="accent">a collection of exercises.</span>
+      </h1>
+      <p class="hero-sub reveal">Train smarter. Move better. Build a body that supports the life you want to live.</p>
+      <a href="contact.html" class="btn-primary reveal">Start Your Journey →</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="section philosophy">
+    <div class="container">
+      <div class="philosophy-text reveal">
+        <h2>Every exercise has a role<br/>within a <span class="accent">larger plan.</span></h2>
+        <p>Effective training starts with understanding the purpose behind movements — not just what to do, but <em>why</em>. When you focus on movement patterns rather than individual exercises, your training becomes more intentional and sustainable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOVEMENT PATTERNS -->
+  <section class="section patterns">
+    <div class="container">
+      <p class="section-label reveal">The Foundation</p>
+      <h2 class="reveal">Prioritizing movement patterns</h2>
+      <div class="patterns-grid">
+        <div class="pattern-card reveal" style="--i:0">
+          <span class="pattern-num">01</span>
+          <h3>Squat</h3>
+          <p>Build lower body strength and stability through full-range knee and hip flexion.</p>
+        </div>
+        <div class="pattern-card reveal" style="--i:1">
+          <span class="pattern-num">02</span>
+          <h3>Hinge</h3>
+          <p>Develop posterior chain power with deadlifts, swings, and hip-dominant patterns.</p>
+        </div>
+        <div class="pattern-card reveal" style="--i:2">
+          <span class="pattern-num">03</span>
+          <h3>Lunge</h3>
+          <p>Train single-leg strength, balance, and unilateral stability for real-world movement.</p>
+        </div>
+        <div class="pattern-card reveal" style="--i:3">
+          <span class="pattern-num">04</span>
+          <h3>Push</h3>
+          <p>Press horizontally and vertically to build a strong, functional upper body.</p>
+        </div>
+        <div class="pattern-card reveal" style="--i:4">
+          <span class="pattern-num">05</span>
+          <h3>Pull</h3>
+          <p>Row and pull to balance the shoulder joint and build resilient posture.</p>
+        </div>
+        <div class="pattern-card reveal" style="--i:5">
+          <span class="pattern-num">06</span>
+          <h3>Carries</h3>
+          <p>Loaded carry work that transfers directly to everyday strength and endurance.</p>
+        </div>
+        <div class="pattern-card reveal" style="--i:6">
+          <span class="pattern-num">07</span>
+          <h3>Trunk Rotation</h3>
+          <p>Train rotational power and core control through all planes of movement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEM CALLOUT -->
+  <section class="section callout">
+    <div class="container">
+      <div class="callout-box reveal">
+        <p class="callout-big">Work your body as a <span class="accent">system</span> —<br/>not one muscle group at a time.</p>
+        <a href="contact.html" class="btn-primary">Get a Program Built for You →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <svg class="logo-svg footer-logo" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="10,55 45,15 65,35 85,10 115,55" fill="none" stroke="#b8d400" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <text x="8" y="30" fill="none" stroke="#b8d400" stroke-width="1.5" font-family="Inter,sans-serif" font-weight="700" font-size="20" letter-spacing="1">mt</text>
+      </svg>
+      <p>&copy; 2026 MT Fitness Coaching. All rights reserved.</p>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
