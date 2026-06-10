@@ -401,6 +401,11 @@ a { text-decoration: none; color: inherit; }
 
 .form-group select option { background: var(--purple-dark); color: var(--white); }
 
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) opacity(0.5);
+  cursor: pointer;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -437,6 +442,7 @@ a { text-decoration: none; color: inherit; }
   border-top: 1px solid var(--card-border);
   background: var(--purple-dark);
 }
+
 .footer .container {
   display: flex;
   align-items: center;
@@ -444,21 +450,75 @@ a { text-decoration: none; color: inherit; }
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 .footer-logo { width: 60px; height: 30px; }
+
 .footer p { font-size: 0.85rem; color: var(--text-muted); }
-.footer a { font-size: 0.85rem; color: var(--lime); font-weight: 600; }
-.footer a:hover { text-decoration: underline; }
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer a.footer-link {
+  font-size: 0.85rem;
+  color: var(--lime);
+  font-weight: 600;
+}
+.footer a.footer-link:hover { text-decoration: underline; }
+
+/* Social icons */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  border-color: var(--lime);
+  color: var(--lime);
+  background: rgba(184,212,0,0.08);
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
 
 /* ===========================
    SCROLL REVEAL ANIMATION
+   Progressive enhancement: content is always visible by default.
+   The .js class (added by components.js) enables the animation.
+   If JS fails for any reason, content stays visible.
    =========================== */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.js .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
   transition-delay: calc(var(--i, 0) * 0.08s);
 }
-.reveal.visible {
+
+.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -470,4 +530,59 @@ a { text-decoration: none; color: inherit; }
   .nav { padding: 1rem 1.25rem; }
   .form-row { grid-template-columns: 1fr; }
   .footer .container { flex-direction: column; text-align: center; }
+  .footer-right { justify-content: center; }
+}
+
+/* ===========================
+   SUCCESS PAGE
+   =========================== */
+.success-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(ellipse at center, #7a2d90 0%, var(--purple-dark) 70%);
+}
+
+.success-content {
+  text-align: center;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.success-check {
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--lime);
+}
+
+.success-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+}
+
+.success-content > p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.success-social a {
+  color: var(--lime);
+  font-weight: 700;
+}
+.success-social a:hover { text-decoration: underline; }
+
+/* Nav back variant (contact / success pages) */
+.nav-cta--back {
+  background: transparent;
+  color: var(--lime);
+  border: 2px solid var(--lime);
+}
+.nav-cta--back:hover {
+  background: var(--lime);
+  color: var(--purple-dark);
 }

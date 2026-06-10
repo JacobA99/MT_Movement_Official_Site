@@ -77,6 +77,12 @@ If you buy a domain (e.g., `mtfitnesscoaching.com`):
 
 ---
 
+## Adding More Social Links Later
+
+When you're ready to add Facebook or YouTube, open `index.html` and `contact.html` and find the `<!-- Social links -->` comment in the footer. Copy the existing Instagram `<a>` block and update the `href`, `aria-label`, and SVG icon path. Standard SVG icon paths are freely available at [simpleicons.org](https://simpleicons.org).
+
+---
+
 ## Future Updates
 
 Every time you update your site files:
