@@ -32,9 +32,13 @@
 
       <form
         class="contact-form reveal"
+        name="contact"
         method="POST"
-        action="/.netlify/functions/submit-form"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="success.html"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
 
         <div class="form-row">

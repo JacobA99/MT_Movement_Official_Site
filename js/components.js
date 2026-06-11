@@ -9,7 +9,7 @@ document.documentElement.classList.add('js');
 // ── Per-page nav CTA ──────────────────────────────────────────────────────────
 var page   = document.body.getAttribute('data-page') || 'home';
 var navCta = document.querySelector('.nav-cta');
-if (navCta && (page === 'contact' || page === 'success')) {
+if (navCta && (page === 'contact' || page === 'success' || page === 'error')) {
   navCta.href        = 'index.html';
   navCta.textContent = '← Back Home';
   navCta.classList.add('nav-cta--back');

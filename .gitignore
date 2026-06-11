@@ -23,6 +23,9 @@ desktop.ini
 *.swo
 *~
 
+# Unused legacy files
+components/
+
 # Internal docs
 SETUP-GUIDE.md
 
