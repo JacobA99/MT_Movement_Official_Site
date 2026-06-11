@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Netlify build output
+.netlify/
+netlify/functions/node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.suo
+*.swp
+*.swo
+*~
+
+# Internal docs
+SETUP-GUIDE.md
+
+# Logs
+*.log
+npm-debug.log*
