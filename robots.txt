@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /success.html
+Disallow: /error.html
+
+Sitemap: https://www.coachmtmovement.com/sitemap.xml
