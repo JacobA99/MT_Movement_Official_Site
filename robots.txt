@@ -3,4 +3,4 @@ Allow: /
 Disallow: /success.html
 Disallow: /error.html
 
-Sitemap: https://www.coachmtmovement.com/sitemap.xml
+Sitemap: https://coachmtmovement.com/sitemap.xml
